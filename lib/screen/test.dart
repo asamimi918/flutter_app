@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screen/list_item.dart';
 
 class Test extends StatelessWidget {
   const Test({super.key});
@@ -28,7 +29,9 @@ class Test extends StatelessWidget {
             Icon(Icons.circle,size: 12,),
             Icon(Icons.circle,size: 12,color: Colors.grey,),
           ],),
-          ElevatedButton(onPressed: (){}, child: Text("Get Started",style: TextStyle(color: Colors.white),),style:  ElevatedButton.styleFrom(backgroundColor: Colors.amber),)
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>ListItem()));
+          }, child:const   Text("Get Started",style: TextStyle(color: Colors.white),),style:  ElevatedButton.styleFrom(backgroundColor: Colors.amber),)
         ],
       ),
     ) ,
