@@ -7,8 +7,8 @@ class ListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey,
-      appBar: AppBar(title: Text("List Item"),),
-      body:Padding(
+      appBar: AppBar(title: Text("List Item")),
+      body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
@@ -17,34 +17,79 @@ class ListItem extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color:Colors.white ),
-                  child: Column(children: [
-                    Text("28K", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                    Text("Followers", style: TextStyle(color: Colors.grey),)
-                  ],),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        "28K",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Followers", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
                 ),
                 Container(
                   padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color:Colors.white ),
-                  child: Column(children: [
-                    Text("28K", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                    Text("Followers", style: TextStyle(color: Colors.grey),)
-                  ],),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        "28K",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Followers", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
                 ),
                 Container(
                   padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color:Colors.white ),
-                  child: Column(children: [
-                    Text("28K", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                    Text("Followers", style: TextStyle(color: Colors.grey),)
-                  ],),
-                ),Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        "28K",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Followers", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
+                ),
+                Container(
                   padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color:Colors.white ),
-                  child: Column(children: [
-                    Text("28K", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                    Text("Followers", style: TextStyle(color: Colors.grey),)
-                  ],),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        "28K",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text("Followers", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
                 ),
               ],
             ),

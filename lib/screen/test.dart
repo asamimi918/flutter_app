@@ -31,7 +31,7 @@ class Test extends StatelessWidget {
           ],),
           ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>ListItem()));
-          }, child:const   Text("Get Started",style: TextStyle(color: Colors.white),),style:  ElevatedButton.styleFrom(backgroundColor: Colors.amber),)
+          },style:  ElevatedButton.styleFrom(backgroundColor: Colors.amber), child:const   Text("Get Started",style: TextStyle(color: Colors.white),),)
         ],
       ),
     ) ,
