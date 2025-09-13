@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/const/assert.dart';
+import 'package:flutter_app/screen/ecomers/ecommers_screen/detail/detail_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
@@ -14,7 +17,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.list)),
+        leading: IconButton(onPressed: () {}, icon: SvgPicture.asset(moreSvg)),
         actions: [
           IconButton(
             onPressed: () {},
@@ -78,40 +81,46 @@ class _CategoryScreenState extends State<CategoryScreen> {
               child: GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 2 / 2.5,
+                  childAspectRatio: 2 / 2.7,
                 ),
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return Container(
-                    padding: EdgeInsets.all(16),
-                    color: Colors.white,
-                    child: Column(
-                      spacing: 8,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.network(
-                          "https://images2.imgix.net/p4dbimg/401/images/2400-15.jpg?fit=fill&bg=FFFFFF&trim=color&trimtol=5&trimcolor=FFFFFF&w=384&h=288&fm=pjpg&auto=format",
-                        ),
-                        Text(
-                          "Stylish Chair",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                  return InkWell(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailScreen()),
+                    ),
+                    child: Container(
+                      padding: EdgeInsets.all(16),
+                      color: Colors.white,
+                      child: Column(
+                        spacing: 8,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.network(
+                            "https://images2.imgix.net/p4dbimg/401/images/2400-15.jpg?fit=fill&bg=FFFFFF&trim=color&trimtol=5&trimcolor=FFFFFF&w=384&h=288&fm=pjpg&auto=format",
                           ),
-                        ),
-                        Text("\$200", style: TextStyle(fontSize: 16)),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: List.generate(3, (index) {
-                            return Icon(
-                              Icons.circle,
-                              color: Colors.green,
-                              size: 12,
-                            );
-                          }),
-                        ),
-                      ],
+                          Text(
+                            "Stylish Chair",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                            ),
+                          ),
+                          Text("\$200", style: TextStyle(fontSize: 16)),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: List.generate(3, (index) {
+                              return Icon(
+                                Icons.circle,
+                                color: Colors.green,
+                                size: 12,
+                              );
+                            }),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },
