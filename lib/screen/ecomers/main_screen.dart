@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screen/ecomers/ecommers_screen/category_screen.dart';
+import 'package:flutter_app/screen/ecomers/ecommers_screen/home_scereen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -17,8 +18,8 @@ class _MainScreenState extends State<MainScreen> {
       body: PageView(
         controller: _controller,
         children: [
+          HomeScreen(),
           CategoryScreen(),
-          Center(child: Text("Search")),
           Center(child: Text("Favorite")),
           Center(child: Text("Profile")),
         ],
@@ -33,11 +34,8 @@ class _MainScreenState extends State<MainScreen> {
         },
 
         destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: "Category"),
-          NavigationDestination(
-            icon: Icon(Icons.search_rounded),
-            label: "Search",
-          ),
+          NavigationDestination(icon: Icon(Icons.home), label: "Home"),
+          NavigationDestination(icon: Icon(Icons.category), label: "Category"),
           NavigationDestination(icon: Icon(Icons.favorite), label: "Favorite"),
           NavigationDestination(icon: Icon(Icons.person), label: "Profile"),
         ],

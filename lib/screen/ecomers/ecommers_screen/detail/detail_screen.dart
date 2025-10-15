@@ -154,39 +154,41 @@ class DetailScreen extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        height: 70,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "\$250",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-            ),
-            ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(Colors.black),
-                padding: WidgetStatePropertyAll(
-                  EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+      bottomNavigationBar: SafeArea(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          height: 70,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "\$250",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              ),
+              ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(Colors.black),
+                  padding: WidgetStatePropertyAll(
+                    EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  ),
+                  shape: WidgetStatePropertyAll(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
                 ),
-                shape: WidgetStatePropertyAll(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
+                onPressed: () {},
+                child: Text(
+                  "Add to cart",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.white,
                   ),
                 ),
               ),
-              onPressed: () {},
-              child: Text(
-                "Add to cart",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
