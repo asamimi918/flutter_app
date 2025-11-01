@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screen/ecomers/main_screen.dart';
+
+import 'package:flutter_app/screen/products/main_product.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       // ),
-      home: MainScreen(),
+      home: MainProduct(),
+      // MainScreen(),
     );
   }
 }
