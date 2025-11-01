@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screen/ecomers/main_screen.dart';
-import 'package:flutter_app/screen/test.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {

@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screen/ecomers/ecommers_screen/items/items_screen.dart';
+import 'package:flutter_app/screen/ecomers/ecommers_screen/detail/detail_screen.dart';
 
-class CategoryScreen extends StatelessWidget {
-  const CategoryScreen({super.key});
+class ItemsScreen extends StatelessWidget {
+  const ItemsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Category")),
+      appBar: AppBar(title: Text("Items Screen")),
       body: GridView.builder(
+        itemCount: 9,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          mainAxisSpacing: 8,
-          crossAxisSpacing: 8,
-          childAspectRatio: 2 / 2.1,
         ),
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ItemsScreen()),
+              MaterialPageRoute(builder: (context) => DetailScreen()),
             ),
             child: Card(
+              color: Colors.white,
               child: Column(
                 children: [
                   Image.network(
                     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMIAhVWh-z-Ny85NNIba4Dfl807tj2U96Uzg&s",
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Table",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  Text(
+                    "Stylish Chair",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                  Text("Description of Category "),
+                  Text("\$250", style: TextStyle(fontSize: 16)),
+                  Row(
+                    children: List.generate(3, (index) {
+                      return Icon(Icons.circle, color: Colors.green, size: 12);
+                    }),
+                  ),
                 ],
               ),
             ),
